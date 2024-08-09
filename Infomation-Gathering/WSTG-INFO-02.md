@@ -1,4 +1,4 @@
-# Chuỗi bài viết về quá trình tìm hiểu Web Application Security Testing Guide (OWASP Testing Project)
+# Chuỗi bài viết về Web Application Security Testing Guide (OWASP Testing Project)
 ## Chủ đề Information Gathering (Thu thập thông tin)
 ## Bài 2. Fingerprint Web Server (WSTG-INFO-02)
 
@@ -7,7 +7,7 @@ Tài liệu gốc [WSTG-INFO-02 (OWASP)](https://owasp.org/www-project-web-secur
 ### Tóm tắt  
 **Fingerprint Web Server** tạm dịch là **dấu vết của máy chủ** là chương thứ 2 trong 10 chủ đề **Thu thập thông tin (Information Gathering)**.  
 
-Chương này nói về việc thu thập thông loại máy chủ và phiên bản của máy chủ đang vận hành hệ thống như Apache, NginX, Lighttp,...Điều này khá quan trọng để chúng ta biết thông tin về nền tảng phụ vụ cho quá trình kiểm thử bảo mật.
+Chương này nói về việc thu thập thông tin loại máy chủ và phiên bản của máy chủ đang vận hành hệ thống như Apache, NginX, Lighttp,...Điều này khá quan trọng để chúng ta biết thông tin về nền tảng phục vụ cho quá trình kiểm thử bảo mật.
 ### Mục tiêu  
 Xác định phiên bản và thể loại của máy chủ web đang chạy để cho phép khám phá nhiều hơn về bất kỳ lỗ hổng nào có thể biết được trên máy chủ.
 ### Cách thực hiện  
@@ -72,8 +72,8 @@ Tuy nhiên, xét rằng nếu có nhiều máy chủ khác nhau có thể chia s
 Máy chủ Web có thể được xác định thông qua việt kiểm tra các phản hồi lỗi của chúng. Trong trường hợp nếu các trang không được thiết kế trước để cung cấp đến người dùng 1 giao diện thông báo lỗi, thì lúc này thông báo lỗi "nguyên gốc" từ trang sẽ được hiển thị ra. Một cách để buộc máy chủ hiển thị ra các trang này là gửi các yêu cầu không đúng hoặc các form được chỉnh sửa **(Malform)** có chủ đích đến máy chủ.   
 
 Để chỉnh sửa các **Request** trước khi gửi đi, có rất nhiều công cụ có thể giúp ta làm việc này. Một công cụ phổ biến và nổi tiếng mà nhiều Pentester rất hay sử dụng là **Burp Suite**.
-![alt text](image.png)
-![alt text](image-1.png)
+![alt text](WSTG-INFO-02-Image/image.png)
+![alt text](WSTG-INFO-02-Image/image-1.png)
 Ví dụ: Ta sẽ gửi một HTTP Request đã dược chỉnh sửa với một phương thức không tồn tại mà ta tự tạo ra, ở đây ví dụ như ```SANTA CLAUS``` đến một máy chủ, ta sẽ nhận lại phản hồi như sau   
 
 
@@ -148,7 +148,7 @@ Trong tài liệu gốc từ OWASP, họ giới thiệu 3 công cụ khá phổ 
 * **Nmap**, không cần phải diễn tả nhiều, Nmap là một công cụ phải gọi là cực kỳ phổ biến và nổi tiếng trong công việc kiểm thử bảo mật.  
 
 Với mình hiện tại khi viết tài liệu này thì mình thích nhất là **Nikto** vì cách sử dụng khá đơn giản và tốc độ quét cũng khá nhanh tạo sự tiện lợi và hiệu quả cao. So với **Nmap** có thể không bằng nhiều khía cạnh, tuy nhiên **Nmap** khá nhiều option phức tạp và và ta phải đợi kết quả khá lâu nếu quét full option. Thì với trong trường hợp chỉ kiểm tra này phản hồi thông tin máy chủ trả về, lựa chọn 1 công cụ tiện lợi như **Nikto** sẽ giúp ta tối ưu thời gian tốt hơn.
-![alt text](image-2.png)
+![alt text](WSTG-INFO-02-Image/image-2.png)
  Bên cạnh đó, còn có rất nhiều công cụ với mục đích tương tự mà mọi người có thể trãi nghiệm và tham khảo thêm. Nếu bạn có 1 máy **Kali Linux**, bạn sẽ có rất nhiều công cụ được cài sẵn để lựa chọn chứ không chỉ dừng lại ở 3 công cụ được giới thiệu như trong tài liệu.  
 ### Biện pháp khắc phục  
 
