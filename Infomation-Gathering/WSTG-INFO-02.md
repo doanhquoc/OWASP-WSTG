@@ -4,14 +4,14 @@
 
 Tài liệu gốc [WSTG-INFO-02 (OWASP)](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/02-Fingerprint_Web_Server)
 
-### Tóm tắt  
+## Tóm tắt  
 **Fingerprint Web Server** tạm dịch là **dấu vết của máy chủ** là chương thứ 2 trong 10 chủ đề **Thu thập thông tin (Information Gathering)**.  
 
 Chương này nói về việc thu thập thông tin loại máy chủ và phiên bản của máy chủ đang vận hành hệ thống như Apache, NginX, Lighttp,...Điều này khá quan trọng để chúng ta biết thông tin về nền tảng phục vụ cho quá trình kiểm thử bảo mật.
-### Mục tiêu  
+## Mục tiêu  
 Xác định phiên bản và thể loại của máy chủ web đang chạy để cho phép khám phá nhiều hơn về bất kỳ lỗ hổng nào có thể biết được trên máy chủ.
-### Cách thực hiện  
-**1. Banner Grabbing**  
+## Cách thực hiện  
+### **1. Banner Grabbing**  
 
 **Banner Grabbing** dịch ra tiếng Việt là **Nắm lấy biểu ngữ**, mình thật sự không thích cách dịch này vì sẽ làm chúng ta khá khó hiểu và nó cũng không diễn tả chính xác về ngữ nghĩa. **Banner** trong ngữ cảnh này được định nghĩa là một văn bản được máy chủ hiển thị các thông tin chi tiết và phiên bản phần mềm chạy trên hệ thống.  
 
@@ -67,7 +67,7 @@ Ngoài ra, ta còn có thể dựa vào **thứ tự sắp xếp các trường*
 
 Tuy nhiên, xét rằng nếu có nhiều máy chủ khác nhau có thể chia sẽ các thứ tự trường giống nhau và các trường có thể bị chỉnh sửa hoặc gỡ bỏ thì phương pháp này không chắc chắn.   
 
-**2. Gửi các yêu cầu với form độc hại (Malformed Requests)**   
+### **2. Gửi các yêu cầu với form độc hại (Malformed Requests)**   
 
 Máy chủ Web có thể được xác định thông qua việt kiểm tra các phản hồi lỗi của chúng. Trong trường hợp nếu các trang không được thiết kế trước để cung cấp đến người dùng 1 giao diện thông báo lỗi, thì lúc này thông báo lỗi "nguyên gốc" từ trang sẽ được hiển thị ra. Một cách để buộc máy chủ hiển thị ra các trang này là gửi các yêu cầu không đúng hoặc các form được chỉnh sửa **(Malform)** có chủ đích đến máy chủ.   
 
@@ -138,7 +138,7 @@ Server: lighttpd/1.4.54
 ```
 Các trang lỗi xuất ra nhiều yếu tố khác nhau giữa các loại máy chủ Web, các bài kiểm tra có thể là một phương thức hiệu quả cho tìm kiếm dấu vết **(Fingerprinting)** kể cả khi các trường **header** của của máy chủ được che dấu.  
 
-**3. Sử dụng các công cụ quét tự động**   
+### **3. Sử dụng các công cụ quét tự động**   
 
 Để bắt đầu một cách dễ dàng hơn, các công cụ hỗ trợ quét tự động là một lựa chọn tuyệt vời cho các Pentester. Ở đây, ta sẽ không phân tích sâu vào cơ chế hoạt động và đặc điểm cụ thể vì có khá nhiều công cụng khác nhau  đang có hiện nay.  
 
@@ -150,7 +150,7 @@ Trong tài liệu gốc từ OWASP, họ giới thiệu 3 công cụ khá phổ 
 Với mình hiện tại khi viết tài liệu này thì mình thích nhất là **Nikto** vì cách sử dụng khá đơn giản và tốc độ quét cũng khá nhanh tạo sự tiện lợi và hiệu quả cao. So với **Nmap** có thể không bằng nhiều khía cạnh, tuy nhiên **Nmap** khá nhiều option phức tạp và và ta phải đợi kết quả khá lâu nếu quét full option. Thì với trong trường hợp chỉ kiểm tra này phản hồi thông tin máy chủ trả về, lựa chọn 1 công cụ tiện lợi như **Nikto** sẽ giúp ta tối ưu thời gian tốt hơn.
 ![alt text](WSTG-INFO-02-Image/image-2.png)
  Bên cạnh đó, còn có rất nhiều công cụ với mục đích tương tự mà mọi người có thể trãi nghiệm và tham khảo thêm. Nếu bạn có 1 máy **Kali Linux**, bạn sẽ có rất nhiều công cụ được cài sẵn để lựa chọn chứ không chỉ dừng lại ở 3 công cụ được giới thiệu như trong tài liệu.  
-### Biện pháp khắc phục  
+## Biện pháp khắc phục  
 
 Như chúng ta đã biết, việc thông tin máy chủ bị tiết lộ cũng được xem là một lỗ hổng. Các Attacker có thể sử dụng thông tin này để phục vụ trong quá trình khai thác các lỗ hổng khác.  
 
