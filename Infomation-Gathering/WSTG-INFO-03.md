@@ -153,7 +153,7 @@ Ta nhận được kết quả như bên dưới
 ```
 Từ đây, Tester có thể khám phá thêm về các gmail trong `https://www.google.com/gmail/sitemap.xml` hoặc cái sitemap khác từ kết quả nhận về.
 
-![Exploring Google sitemap](WSTG-INFO-03-Image\image-02.png)
+![Exploring Google's sitemap.xml](WSTG-INFO-03-Image/image-02.png)
 ### Bảo mật TXT
 [security.txt](https://securitytxt.org/) đã được chấp nhận bởi tổ chức [IETF](https://www.ietf.org/about/introduction/) như là [RFC 9116 - A File Format to Aid in Security Vulnerability Disclosure](https://www.rfc-editor.org/rfc/rfc9116.html) (Một định dạng file cho việc hỗ trợ tiết lộ lỗ hổng bảo mật). File này cho phép các site xác định các chính sách bảo mật và các chi tiết liên lạc. Có nhiều lý do cho việc tại sao điều này có thể được quan tâm trong các kịch bản kiểm tra, nó bao gồm nhưng không giới hạn đế các vấn đề dưới đây:
 * Xác định nhiều hơn các đường dẫn và các tài nguyên cho việc khám phá và phân tích.
