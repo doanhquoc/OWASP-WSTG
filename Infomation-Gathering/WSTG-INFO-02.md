@@ -5,10 +5,10 @@
 Tài liệu gốc [WSTG-INFO-02 (OWASP)](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/02-Fingerprint_Web_Server)
 
 ## Tóm tắt  
-**Fingerprint Web Server** tạm dịch là **dấu vết của máy chủ** là chương thứ 2 trong 10 chủ đề **Thu thập thông tin (Information Gathering)**.  
+**Fingerprint Web Server** tạm dịch là **dấu vết của máy chủ** là bài thứ 2 trong 10 chủ đề **Thu thập thông tin (Information Gathering)**.  
 
 Chương này nói về việc thu thập thông tin loại máy chủ và phiên bản của máy chủ đang vận hành hệ thống như Apache, NginX, Lighttp,...Điều này khá quan trọng để chúng ta biết thông tin về nền tảng phục vụ cho quá trình kiểm thử bảo mật.
-## Mục tiêu  
+## Mục tiêu kiểm tra 
 Xác định phiên bản và thể loại của máy chủ web đang chạy để cho phép khám phá nhiều hơn về bất kỳ lỗ hổng nào có thể biết được trên máy chủ.
 ## Cách thực hiện  
 ### **1. Banner Grabbing**  
@@ -72,8 +72,8 @@ Tuy nhiên, xét rằng nếu có nhiều máy chủ khác nhau có thể chia s
 Máy chủ Web có thể được xác định thông qua việt kiểm tra các phản hồi lỗi của chúng. Trong trường hợp nếu các trang không được thiết kế trước để cung cấp đến người dùng 1 giao diện thông báo lỗi, thì lúc này thông báo lỗi "nguyên gốc" từ trang sẽ được hiển thị ra. Một cách để buộc máy chủ hiển thị ra các trang này là gửi các yêu cầu không đúng hoặc các form được chỉnh sửa **(Malform)** có chủ đích đến máy chủ.   
 
 Để chỉnh sửa các **Request** trước khi gửi đi, có rất nhiều công cụ có thể giúp ta làm việc này. Một công cụ phổ biến và nổi tiếng mà nhiều Pentester rất hay sử dụng là **Burp Suite**.
-![alt text](WSTG-INFO-02-Image/image.png)
-![alt text](WSTG-INFO-02-Image/image-1.png)
+![Trang chủ PortSwigger](WSTG-INFO-02-Image/image.png)
+![Giao diện làm việc Burp Suite](WSTG-INFO-02-Image/image-1.png)
 Ví dụ: Ta sẽ gửi một HTTP Request đã dược chỉnh sửa với một phương thức không tồn tại mà ta tự tạo ra, ở đây ví dụ như ```SANTA CLAUS``` đến một máy chủ, ta sẽ nhận lại phản hồi như sau   
 
 
