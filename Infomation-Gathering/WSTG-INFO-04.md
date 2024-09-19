@@ -150,7 +150,7 @@ Có một số kỹ thuật có thể được sử dụng để xác định c�
 
 #### DNS Zone Transfers
 
-Kỹ thuật này đã được sử dụng hạn chế trong ngày nay, một sự thật được đưa ra rằng các **"Zone Transfer" (Vùng chuyển đổi)** lớn không được chấp nhận bởi các máy chủ DNS. Tuy nhiên, có thể đáng để thử. Đầu tiên, các Tester phải xác định các **NS - Name Server (máy chủ nắm tên miền)** đang phục vụ địa chỉ IP cần kiểm tra chẳng hàng như ```x.y.z.t```. Nếu tên đại diện được biết cho ```x.y.z.t``` (ví dụ như ```wwww.example.com```), các **Name Server** của nó có thể được xác định bằng các công cụ chẳng hạn như ```nslookup```, ```host``` hay ```dig``` với các yếu cầu để thu thập các **DNS NS record**. 
+Kỹ thuật này đã được sử dụng hạn chế trong ngày nay, một sự thật được đưa ra rằng các **"Zone Transfer" (Vùng chuyển đổi)** lớn không được chấp nhận bởi các máy chủ DNS. Tuy nhiên, có thể đáng để thử. Đầu tiên, các Tester phải xác định các **NS - Name Server (máy chủ nắm tên miền)** đang phục vụ địa chỉ IP cần kiểm tra chẳng hạng như ```x.y.z.t```. Nếu tên đại diện được biết cho ```x.y.z.t``` (ví dụ như ```wwww.example.com```), các **Name Server** của nó có thể được xác định bằng các công cụ chẳng hạn như ```nslookup```, ```host``` hay ```dig``` với các yếu cầu để thu thập các **DNS NS record**. 
 
 Nếu không có tên đại diện nào được biết, nhưng việc xác định mục tiêu chứa ít nhất một tên đại diện, các Tester có thể cố gắng áp dụng cùng một quá trình và truy vấn **Name Server** của tên miền đó (Hy vọng rằng ```x.y.z.t``` cũng sẽ được dịch ngược bởi tên **Name Server**). Ví dụ, nếu mục tiêu chứa địa chỉ IP ```x.y.z.t``` và tên miền là ```mail.example.com```, hãy xác định các máy chủ nắm tên miền cho ```example.com```.
 
@@ -265,7 +265,7 @@ Host 8.8.8.8.in-addr.arpa not found: 5(REFUSED)
 
 Đây là kiểu tìm kiếm giống **DNS Zone Transfer**, nhưng dựa trên dịch vụ nền tảng web, điều này cho phép các tìm kiếm dựa vào tên trên DNS. Một trong những dịch vụ như vậy là [**Netcraft Search DNS**](https://searchdns.netcraft.com/?host). Tester có thể truy vấn một danh sách của các tên thuộc tên miền chúng ta chọn, chẵng hạng như ```facebook.com```. Sau đó họ sẽ kiểm tra liệu các tên họ tìm kiếm được có liên quan đến mục tiêu họ đang kiểm tra hay không.
 
-![Netscraft Search DNS](WSTG-INFO-04-Image\image-2.png)
+![Netscraft Search DNS](WSTG-INFO-04-Image/image-2.png)
 
 #### Các dịch vụ dịch ngược địa chỉ IP (Reverse IP Services)
 
@@ -275,19 +275,19 @@ Một số công cụ trong tài liệu của OSWAP đưa ra và mình có đưa
 
 * [**MxToolbox Reverse IP**](https://mxtoolbox.com/ReverseLookup.aspx) - Website giúp chúng ta tìm kiếm thông tin và phân tích tên miền hoặc địa chỉ IP.
 
-![MxToolbox Reverse IP](WSTG-INFO-04-Image\image-3.png)
+![MxToolbox Reverse IP](WSTG-INFO-04-Image/image-3.png)
 * [**DNSstuff**](https://www.dnsstuff.com/) - Website tổng hợp thông tin về các công cụ và sản phẩm dịch vụ phục vụ cho các nhà quản lý mạng máy tính, hệ thống, an toàn thông tin, cơ sỡ dữ liệu,...
 
-![DNSstuff](WSTG-INFO-04-Image\image-4.png)
+![DNSstuff](WSTG-INFO-04-Image/image-4.png)
 * [**Hacker Target**](https://hackertarget.com/) - Website  phục vụ quá trình đánh giá bảo mật với các bộ công cụ online giúp ta sử dụng một cách dễ dàng và nhanh chóng trong đó có các công cụ phục vụ cho việc kiểm tra DNS.
 
-![Hacker Tagert](WSTG-INFO-04-Image\image-5.png)
+![Hacker Tagert](WSTG-INFO-04-Image/image-5.png)
 
 * [**DNS Dumpster**](https://dnsdumpster.com/) - Website quét DNS bản thân mình khá ưa thích vì tốc độ nhanh, tiện lợi, biễu diễn nhiều thông tin dễ nhìn và có sơ đồ trực quan.
 
-![DNS Dumpster](WSTG-INFO-04-Image\image-6.png)
+![DNS Dumpster](WSTG-INFO-04-Image/image-6.png)
 
-![DNS Dumpester Graph](WSTG-INFO-04-Image\image-7.png)
+![DNS Dumpester Graph](WSTG-INFO-04-Image/image-7.png)
 
 #### Googling
 
