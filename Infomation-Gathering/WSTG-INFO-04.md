@@ -3,7 +3,7 @@
 ## Bài 4. Enumerate Applications on Webserver (WSTG-INFO-04)  
 Tài liệu gốc [WSTG-INFO-04](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/04-Enumerate_Applications_on_Webserver)  
 ## Tóm tắt
-**Enumerate Applications on Webserver (WSTG-INFO-04) (Liệt kê các ứng dụng trên máy chủ web)** là bài thứ 4 trong 10 chủ đề **Thu thập thông tin (Information Gathering)**  
+**Enumerate Applications on Webserver (Liệt kê các ứng dụng trên máy chủ web)** là bài thứ 4 trong 10 chủ đề **Thu thập thông tin (Information Gathering)**  
 
 Một bước tối quan trọng trong khiểm tra các lỗ hổng trên ứng dụng web là tìm ra ứng dụng cụ thể đang chạy trên máy chủ web. Nhiều ứng dụng đã được biết các lỗ hổng và biết cách khai thác các lỗ hổng đó để đạt được quyền điều khiển hoặc khai thác dữ liệu trên máy chủ. Thêm vào đó, nhiều ứng dụng thường không được cấu hình hoặc không được cập nhật, vì có một sự nhận thức thiếu sót rằng các ứng dụng chỉ được sử dụng "nội bộ" và do đó không tồn tại bất kỳ mối đe dọa nào hoặc điển hình có nhiều tổ chức chỉ triển khai các hệ thống bảo vệ như tường lửa hay proxy và cho rằng là đủ và không kiểm tra bảo mật các ứng dụng lớp trong. Với sự phát triển của các máy chủ web ảo, mối quan hệ truyền thống 1:1 giữa một địa chỉ IP và một máy chủ đã mất đi nhiều ý nghĩa ban đầu của nó. Không hiếm khi có nhiều site hay ứng dụng mà các tên đại diện của chúng được phân giải đến cùng địa chỉ IP. Kịch bản này không chỉ giới hạn trên các môi trường lưu trữ (Hosting environments), mà còn áp dụng đến các môi trường doanh nghiệp thông thường.
 
